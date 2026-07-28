@@ -1,0 +1,16 @@
+# Visual Studio & IDE
+.vs/
+*.user
+*.suo
+bin/
+obj/
+
+# Node & Frontend
+Frontend/node_modules/
+Frontend/dist/
+
+# Archives & Temporary
+*.rar
+DO_AN_THUCPHAM_BENTRE_NGUYEN_NHAN_PHU.zip
+DO_AN_THUCPHAM_BENTRE_THACH_AN_TRUONG.zip
+*.log
