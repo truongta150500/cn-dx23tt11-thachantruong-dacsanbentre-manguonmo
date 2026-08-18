@@ -1,0 +1,73 @@
+/*
+Theme Name: Bach Hoa Xanh - Dac San Ben Tre Child Theme
+Description: Giao dien nhan dien sieu thi Bach Hoa Xanh cho san pham OCOP Ben Tre
+Author: Thach An Truong (MSSV: 170123678)
+Version: 1.0.0
+*/
+
+:root {
+  --bhx-green: #008848;
+  --bhx-green-dark: #005c30;
+  --bhx-yellow: #fcd535;
+  --bhx-red: #ea1e25;
+  --bhx-dark: #1e293b;
+  --bhx-bg: #f8fafc;
+}
+
+/* Header xanh lá chuẩn Bách Hóa Xanh */
+.bhx-main-header {
+  background-color: var(--bhx-green);
+  color: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* Nút giỏ hàng vàng chanh */
+.bhx-cart-btn {
+  background-color: var(--bhx-yellow) !important;
+  color: var(--bhx-dark) !important;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 8px 18px;
+  transition: transform 0.2s ease;
+}
+
+.bhx-cart-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Khối Flash Sale đỏ rực rỡ */
+.bhx-flashsale-banner {
+  background: linear-gradient(90deg, #ea1e25 0%, #ff4b55 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Lưới sản phẩm & thẻ OCOP */
+.woocommerce ul.products li.product {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  background: #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+
+.woocommerce ul.products li.product:hover {
+  box-shadow: 0 8px 20px rgba(0, 136, 72, 0.15);
+  border-color: var(--bhx-green);
+  transform: translateY(-4px);
+}
+
+.bhx-ocop-badge {
+  background-color: var(--bhx-green-dark);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
