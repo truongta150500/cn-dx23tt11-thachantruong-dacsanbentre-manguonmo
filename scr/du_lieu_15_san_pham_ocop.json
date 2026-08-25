@@ -1,0 +1,17 @@
+[
+  {"id": 1, "name": "Kẹo dừa sáp sầu riêng Bến Tre", "category": "Đặc Sản Từ Dừa", "price": 65000, "orig_price": 75000, "ocop": "4 sao", "origin": "Châu Thành, Bến Tre"},
+  {"id": 2, "name": "Mứt dừa non truyền thống ít đường", "category": "Đặc Sản Từ Dừa", "price": 85000, "orig_price": 95000, "ocop": "3 sao", "origin": "Mỏ Cày Nam, Bến Tre"},
+  {"id": 3, "name": "Rượu dừa đóng bình hồ lô Bến Tre", "category": "Đặc Sản Từ Dừa", "price": 135000, "orig_price": 150000, "ocop": "4 sao", "origin": "Giồng Trôm, Bến Tre"},
+  {"id": 4, "name": "Thạch dừa xiêm Bến Tre giòn ngọt", "category": "Đặc Sản Từ Dừa", "price": 35000, "orig_price": 40000, "ocop": "3 sao", "origin": "TP. Bến Tre"},
+  {"id": 5, "name": "Bánh tráng sữa dừa sầu riêng", "category": "Bánh Kẹo Truyền Thống", "price": 45000, "orig_price": 50000, "ocop": "3 sao", "origin": "Làng nghề Mỹ Lồng, Giồng Trôm"},
+  {"id": 6, "name": "Bánh phồng tôm Sơn Đốc Bến Tre", "category": "Bánh Kẹo Truyền Thống", "price": 75000, "orig_price": 85000, "ocop": "4 sao", "origin": "Làng nghề Sơn Đốc, Hưng Nhượng"},
+  {"id": 7, "name": "Bánh kẹp cuốn nước cốt dừa", "category": "Bánh Kẹo Truyền Thống", "price": 50000, "orig_price": 55000, "ocop": "3 sao", "origin": "Chợ Lách, Bến Tre"},
+  {"id": 8, "name": "Kẹo chuối cuộn đậu phộng Bến Tre", "category": "Bánh Kẹo Truyền Thống", "price": 45000, "orig_price": 50000, "ocop": "3 sao", "origin": "Bình Đại, Bến Tre"},
+  {"id": 9, "name": "Chuối sấy dẻo Bến Tre túi zip", "category": "Mứt & Trái Cây Sấy", "price": 40000, "orig_price": 45000, "ocop": "3 sao", "origin": "Ba Tri, Bến Tre"},
+  {"id": 10, "name": "Xoài sấy dẻo Chợ Lách Bến Tre", "category": "Mứt & Trái Cây Sấy", "price": 65000, "orig_price": 75000, "ocop": "4 sao", "origin": "Chợ Lách, Bến Tre"},
+  {"id": 11, "name": "Mứt gừng dẻo lăn mè Bến Tre", "category": "Mứt & Trái Cây Sấy", "price": 55000, "orig_price": 60000, "ocop": "3 sao", "origin": "Châu Thành, Bến Tre"},
+  {"id": 12, "name": "Nem chua Bến Tre gói lá ổi", "category": "Thực Phẩm Chế Biến", "price": 55000, "orig_price": 65000, "ocop": "4 sao", "origin": "Lò Nem Ba Tri, Bến Tre"},
+  {"id": 13, "name": "Tôm khô Ba Tri Bến Tre loại 1", "category": "Thực Phẩm Chế Biến", "price": 220000, "orig_price": 250000, "ocop": "4 sao", "origin": "Cảng cá Ba Tri, Bến Tre"},
+  {"id": 14, "name": "Cá sặc rằn một nắng Bến Tre", "category": "Thực Phẩm Chế Biến", "price": 140000, "orig_price": 160000, "ocop": "3 sao", "origin": "Thạnh Phú, Bến Tre"},
+  {"id": 15, "name": "Khô cá lóc đồng ướp tiêu sọ", "category": "Thực Phẩm Chế Biến", "price": 150000, "orig_price": 170000, "ocop": "4 sao", "origin": "Mỏ Cày Bắc, Bến Tre"}
+]
