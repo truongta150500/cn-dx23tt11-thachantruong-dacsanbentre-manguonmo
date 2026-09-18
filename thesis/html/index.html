@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>BÁO CÁO ĐỒ ÁN - THẠCH AN TRƯỜNG - 170123678</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 20mm 20mm 30mm;
+  }
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    line-height: 1.5;
+    color: #1a1a1a;
+    background: #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 40px;
+  }
+  h1.chapter-title {
+    font-size: 18pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #005c30;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #008848;
+    padding-bottom: 8px;
+  }
+  h2.sec-title {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #008848;
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+  h3.subsec-title {
+    font-size: 13pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #333333;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  p {
+    text-align: justify;
+    margin-bottom: 10px;
+    text-indent: 1.25cm;
+  }
+  .figure-box {
+    text-align: center;
+    margin: 20px 0;
+    page-break-inside: avoid;
+  }
+  .figure-box img {
+    max-width: 90%;
+    height: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+  .figure-caption {
+    font-size: 11pt;
+    font-style: italic;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 6px;
+    text-indent: 0;
+  }
+  table.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 11.5pt;
+  }
+  table.report-table th, table.report-table td {
+    border: 1px solid #94a3b8;
+    padding: 8px 12px;
+  }
+  table.report-table th {
+    background-color: #008848;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+  }
+  blockquote.alert-box {
+    background-color: #f1f8f4;
+    border-left: 4px solid #008848;
+    padding: 10px 18px;
+    margin: 15px 0;
+    font-style: italic;
+  }
+  hr.page-divider {
+    border: 0;
+    border-top: 1px dashed #cbd5e1;
+    margin: 30px 0;
+  }
+</style>
+</head>
+<body>
+<h1 class='chapter-title'>BÁO CÁO ĐỒ ÁN MÔN HỌC: PHẦN MỀM MÃ NGUỒN MỞ</h1>
+<br />
+<p><strong>ĐỀ TÀI:</strong></p>
+<p><strong>XÂY DỰNG WEBSITE THƯƠNG MẠI ĐIỆN TỬ BÁN THỰC PHẨM CHẾ BIẾN ĐẶC SẢN BẾN TRE TRÊN MÁY CHỦ MÃ NGUỒN MỞ LAMP VÀ CMS WORDPRESS</strong></p>
+<p><em>(Định dạng giao diện: Chuỗi Siêu thị Bách Hoá Xanh - bachhoaxanh.com)</em></p>
+<br />
+<hr class='page-divider' />
+<br />
+<p>* <strong>Học phần:</strong> Phần mềm mã nguồn mở (Open Source Software)</p>
+<p>* <strong>Sinh viên thực hiện:</strong> Nguyễn Nhân Phú</p>
+<p>* <strong>Giảng viên hướng dẫn:</strong> Bộ môn Công nghệ Phần mềm / Mạng máy tính</p>
+<p>* <strong>Hệ điều hành máy chủ:</strong> Ubuntu Server 22.04.5 LTS (64-bit)</p>
+<p>* <strong>Nền tảng ứng dụng:</strong> Apache 2.4 + MySQL 8.0 + PHP 8.1 + WordPress 6.x + WooCommerce 11.x</p>
+<p>* <strong>Công cụ quản trị từ xa:</strong> VirtualBox, Xshell 7, Xftp 7, WP-CLI</p>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>MỤC LỤC CHI TIẾT</h2>
+<br />
+<p>1. [CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI & PHÂN TÍCH YÊU CẦU](#chương-1-tổng-quan-đề-tài--phân-tích-yêu-cầu)</p>
+<p>2. [CHƯƠNG 2: NGHIÊN CỨU & CÀI ĐẶT MÁY CHỦ ẢO MÔ HÌNH LAMP](#chương-2-nghiên-cứu--cài-đặt-máy-chủ-ảo-mô-hình-lamp)</p>
+<p>3. [CHƯƠNG 3: NGHIÊN CỨU HỆ QUẢN TRỊ NỘI DUNG CMS WORDPRESS & WOOCOMMERCE](#chương-3-nghiên-cứu-hệ-quản-trị-nội-dung-cms-wordpress--woocommerce)</p>
+<p>4. [CHƯƠNG 4: THU THẬP SỐ LIỆU 15 SẢN PHẨM THỰC PHẨM CHẾ BIẾN ĐẶC SẢN BẾN TRE](#chương-4-thu-thập-số-liệu-15-sản-phẩm-thực-phẩm-chế-biến-đặc-sản-bến-tre)</p>
+<p>5. [CHƯƠNG 5: THIẾT KẾ XÂY DỰNG GIAO DIỆN THEO PHONG CÁCH BÁCH HOÁ XANH](#chương-5-thiết-kế-xây-dựng-giao-diện-theo-phong-cách-bách-hoá-xanh)</p>
+<p>6. [CHƯƠNG 6: QUY TRÌNH SAO LƯU & PHỤC HỒI DỮ LIỆU QUA XSHELL VÀ XFTP](#chương-6-quy-trình-sao-lưu--phục-hồi-dữ-liệu-qua-xshell-và-xftp)</p>
+<p>7. [CHƯƠNG 7: KẾT LUẬN & HƯỚNG PHÁT TRIỂN ĐỀ TÀI](#chương-7-kết-luận--hướng-phát-triển-đề-tài)</p>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>CHƯƠNG 1: TỔNG QUAN ĐỀ TÀI & PHÂN TÍCH YÊU CẦU</h2>
+<br />
+<h3 class='subsec-title'>1.1. Bối cảnh và Tính cấp thiết của đề tài</h3>
+<p>Trong thời đại chuyển đổi số và phát triển kinh tế nông nghiệp bền vững, các sản phẩm chế biến từ làng nghề truyền thống đóng vai trò quan trọng trong việc nâng cao giá trị chuỗi nông sản địa phương. Tỉnh Bến Tre - nổi tiếng với danh xưng "Xứ sở dừa Việt Nam" - sở hữu nhiều làng nghề truyền thống trứ danh như làng kẹo dừa Mỏ Cày, làng bánh phồng Sơn Đốc (Giồng Trôm), các cơ sở chế biến tôm khô Bình Đại, chả lụa và nem chua đậm đà hương vị Nam Bộ.</p>
+<br />
+<p>Tuy nhiên, việc phân phối phần lớn vẫn phụ thuộc vào thương lái và các chợ truyền thống. Xây dựng một <strong>Website thương mại điện tử chuyên nghiệp, uy tín dựa trên mô hình chuỗi bán lẻ hiện đại (tương tự như Bách Hoá Xanh)</strong> là giải pháp tối ưu giúp đưa đặc sản quê hương đến tay người tiêu dùng cả nước.</p>
+<br />
+<h3 class='subsec-title'>1.2. Mục tiêu nghiên cứu & Sản phẩm bàn giao</h3>
+<p>1. Làm chủ việc thiết lập máy chủ ảo Linux (Ubuntu Server) và mô hình dịch vụ mạng <strong>LAMP Stack</strong> (Linux - Apache - MySQL - PHP).</p>
+<p>2. Nghiên cứu sâu về CMS mã nguồn mở hàng đầu thế giới <strong>WordPress</strong> cùng plugin thương mại điện tử <strong>WooCommerce</strong>.</p>
+<p>3. Thu thập dữ liệu thực tế của <strong>15 sản phẩm chế biến đặc sản Bến Tre</strong> đạt chứng nhận OCOP, an toàn vệ sinh thực phẩm (VSATTP).</p>
+<p>4. Xây dựng giao diện mua sắm hiện đại chuẩn Bách Hoá Xanh với tone màu xanh lá đặc trưng (<code>#008848</code>), giỏ hàng tức thì, phân loại ngành hàng, flash sale giờ vàng và 2 cổng thanh toán: COD (Tiền mặt) & BACS (Chuyển khoản Vietcombank).</p>
+<p>5. Thiết lập quy trình chuẩn về <strong>Sao lưu (Backup)</strong> và <strong>Phục hồi (Restore)</strong> toàn vẹn website và cơ sở dữ liệu thông qua bộ công cụ quản trị từ xa <strong>Xshell</strong> (CLI) và <strong>Xftp</strong> (GUI).</p>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>CHƯƠNG 2: NGHIÊN CỨU & CÀI ĐẶT MÁY CHỦ ẢO MÔ HÌNH LAMP</h2>
+<br />
+<h3 class='subsec-title'>2.1. Kiến trúc mô hình LAMP Stack</h3>
+<p>Mô hình LAMP là nền tảng máy chủ mã nguồn mở kinh điển và phổ biến nhất thế giới cho các ứng dụng Web:</p>
+<p>* <strong>L (Linux):</strong> Hệ điều hành máy chủ Ubuntu Server 22.04 LTS nhân Linux 5.15, đảm bảo tính bảo mật cao, không giao diện đồ họa nặng (headless server), hoạt động ổn định và tiết kiệm tài nguyên RAM.</p>
+<p>* <strong>A (Apache HTTP Server 2.4):</strong> Web Server chịu trách nhiệm lắng nghe cổng mạng (Port 80/443), tiếp nhận HTTP requests từ client, xử lý điều hướng URL (<code>mod_rewrite</code>) và phối hợp với PHP.</p>
+<p><em> <strong>M (MySQL 8.0):</strong> Hệ quản trị cơ sở dữ liệu quan hệ (RDBMS), lưu trữ toàn bộ dữ liệu người dùng, bài viết, sản phẩm, đơn hàng, cấu hình bảng <code>wp_posts</code>, <code>wp_options</code>, <code>wp_woocommerce_</em></code>.</p>
+<p>* <strong>P (PHP 8.1):</strong> Ngôn ngữ kịch bản phía máy chủ (Server-side scripting), xử lý logic nghiệp vụ của WordPress, kết nối MySQL qua thư viện <code>pdo_mysql</code> / <code>mysqli</code>.</p>
+<br />
+<p><code></code>`mermaid</p>
+<p>graph TD</p>
+<p>Client["Trình duyệt Client (Chrome/Edge/Mobile)"] -->|"HTTP Request (Port 8080)"| VBoxPort["VirtualBox NAT Port Forwarding (8080 -> 80)"]</p>
+<p>Admin["Quản trị viên (Xshell / Xftp)"] -->|"SSH/SFTP (Port 2222)"| VBoxSSH["VirtualBox NAT Port Forwarding (2222 -> 22)"]</p>
+<p>VBoxPort --> Apache["Apache Web Server 2.4 (/etc/apache2)"]</p>
+<p>VBoxSSH --> OpenSSH["OpenSSH Server (Ubuntu 22.04 LTS)"]</p>
+<p>Apache --> PHP["PHP 8.1 Engine & Extensions (gd, mbstring, curl, xml, zip)"]</p>
+<p>PHP <--> WordPress["Mã nguồn WordPress & WooCommerce (/var/www/html/thucpham)"]</p>
+<p>WordPress <--> MySQL["MySQL Database Server 8.0 (DB: thucpham_bentree)"]</p>
+<p><code></code>`</p>
+<br />
+<h3 class='subsec-title'>2.2. Thông số thiết lập Máy chủ ảo (VirtualBox VM)</h3>
+<p>* <strong>Tên máy ảo:</strong> <code>Ubuntu-LAMP-BenTre</code></p>
+<p>* <strong>RAM cấp phát:</strong> 1536 MB (1.5 GB) - Tối ưu cho môi trường máy chủ LAMP headless.</p>
+<p>* <strong>CPU:</strong> 2 vCPUs, hỗ trợ ảo hóa phần cứng VT-x/AMD-V.</p>
+<p>* <strong>Ổ đĩa ảo:</strong> VDI dung lượng 25 GB, định dạng động (Dynamically Allocated).</p>
+<p>* <strong>Cấu hình mạng (Network):</strong> Chế độ <strong>NAT</strong> kèm theo bảng ánh xạ cổng (Port Forwarding):</p>
+<p>* <strong>Quy tắc SSH:</strong> Host IP: <code>127.0.0.1</code> | Host Port: <code>2222</code> $\rightarrow$ Guest Port: <code>22</code></p>
+<p>* <strong>Quy tắc Web:</strong> Host IP: <code>127.0.0.1</code> | Host Port: <code>8080</code> $\rightarrow$ Guest Port: <code>80</code></p>
+<br />
+<h3 class='subsec-title'>2.3. Quy trình lệnh cài đặt gói dịch vụ trên Ubuntu Server</h3>
+<p><code></code>`bash</p>
+<h1 class='chapter-title'>1. Cập nhật chỉ mục gói hệ thống</h1>
+<p>sudo apt update && sudo apt upgrade -y</p>
+<br />
+<h1 class='chapter-title'>2. Cài đặt Apache Web Server và kích hoạt module rewrite</h1>
+<p>sudo apt install apache2 -y</p>
+<p>sudo a2enmod rewrite</p>
+<p>sudo systemctl enable apache2</p>
+<p>sudo systemctl start apache2</p>
+<br />
+<h1 class='chapter-title'>3. Cài đặt MySQL Database Server</h1>
+<p>sudo apt install mysql-server -y</p>
+<p>sudo systemctl enable mysql</p>
+<p>sudo systemctl start mysql</p>
+<br />
+<h1 class='chapter-title'>4. Cài đặt PHP 8.1 và các phần mở rộng bắt buộc cho WordPress/WooCommerce</h1>
+<p>sudo apt install php libapache2-mod-php php-mysql php-curl php-gd \</p>
+<p>php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip -y</p>
+<br />
+<h1 class='chapter-title'>5. Khởi động lại Apache để nạp mô-đun PHP</h1>
+<p>sudo systemctl restart apache2</p>
+<p><code></code>`</p>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>CHƯƠNG 3: NGHIÊN CỨU HỆ QUẢN TRỊ NỘI DUNG CMS WORDPRESS & WOOCOMMERCE</h2>
+<br />
+<h3 class='subsec-title'>3.1. Giới thiệu CMS WordPress</h3>
+<p>WordPress là hệ thống quản trị nội dung mã nguồn mở viết bằng PHP và sử dụng MySQL, hiện chiếm hơn 43% tổng số website trên toàn cầu.</p>
+<p>* <strong>Ưu điểm:</strong></p>
+<p>* Hoàn toàn miễn phí, mã nguồn mở theo giấy phép GNU GPLv2.</p>
+<p>* Hệ sinh thái vô cùng đồ sộ với hơn 60.000 plugin và 10.000 giao diện (theme).</p>
+<p>* Khả năng mở rộng (Scalability) mạnh mẽ qua kiến trúc Hooks (<code>actions</code> và <code>filters</code>).</p>
+<p>* Chuẩn hóa cấu trúc URL thân thiện SEO, hỗ trợ đa ngôn ngữ và phân quyền tài khoản chặt chẽ.</p>
+<p>* <strong>Khuyết điểm:</strong></p>
+<p>* Dễ bị tấn công brute-force hoặc khai thác lỗ hổng nếu không cập nhật core và plugin định kỳ.</p>
+<p>* Cần tối ưu bộ nhớ đệm (caching) và truy vấn SQL khi dữ liệu sản phẩm tăng cao.</p>
+<br />
+<h3 class='subsec-title'>3.2. Plugin Thương Mại Điện Tử WooCommerce</h3>
+<p>WooCommerce biến website WordPress thành hệ thống bán hàng chuyên nghiệp với đầy đủ:</p>
+<p>* Quản lý sản phẩm (Đơn giản, biến thể, có khuyến mãi, hết hàng/còn hàng).</p>
+<p>* Quản lý kho hàng (SKU, số lượng tồn).</p>
+<p>* Hệ thống giỏ hàng và trang thanh toán tự động tính toán thuế, phí vận chuyển.</p>
+<p>* Quản lý đơn hàng (Trạng thái: Chờ thanh toán, Đang xử lý, Hoàn thành, Đã hủy).</p>
+<br />
+<h3 class='subsec-title'>3.3. Cấu hình CSDL cho WordPress</h3>
+<p><code></code>`sql</p>
+<p>CREATE DATABASE thucpham_bentree CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</p>
+<p>CREATE USER 'wp_bentree'@'localhost' IDENTIFIED BY 'BenTre@2026';</p>
+<p>GRANT ALL PRIVILEGES ON thucpham_bentree.* TO 'wp_bentree'@'localhost';</p>
+<p>FLUSH PRIVILEGES;</p>
+<p><code></code>`</p>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>CHƯƠNG 4: THU THẬP SỐ LIỆU 15 SẢN PHẨM THỰC PHẨM CHẾ BIẾN ĐẶC SẢN BẾN TRE</h2>
+<br />
+<p>Nhóm tác giả đã nghiên cứu và thu thập danh mục 15 sản phẩm thực phẩm chế biến tiêu biểu của tỉnh Bến Tre, chia thành 4 nhóm ngành hàng đặc trưng:</p>
+<br />
+<table class='report-table'>
+<tr><th>STT</th><th>Mã ID</th><th>Tên Đặc Sản Chế Biến</th><th>Ngành Hàng</th><th>Giá Gốc (VNĐ)</th><th>Giá Bán Khuyến Mãi (VNĐ)</th><th>Nhãn Khuyến Mãi</th><th>Đặc Điểm Chế Biến & Đóng Gói</th></tr>
+<tr><td>**1**</td><td>**10**</td><td>**Kẹo Dừa Bến Tre Thanh Long**</td><td>Đặc Sản Từ Dừa</td><td>45.000</td><td>**38.000**</td><td>🔥 SALE (-15%)</td><td>Hộp truyền thống 300g, bọc bánh tráng mỏng ăn được, mạch nha & nước cốt dừa.</td></tr>
+<tr><td>**2**</td><td>**11**</td><td>**Kẹo Dừa Sầu Riêng Ri6**</td><td>Đặc Sản Từ Dừa</td><td>55.000</td><td>**46.000**</td><td>🔥 SALE (-16%)</td><td>Hộp 350g, kết hợp cơm sầu riêng Ri6 Chợ Lách béo ngậy.</td></tr>
+<tr><td>**3**</td><td>**12**</td><td>**Bánh Tráng Dừa Nướng Giòn**</td><td>Đặc Sản Từ Dừa</td><td>25.000</td><td>**25.000**</td><td>Standard</td><td>Bịch 5 bánh tròn nướng sẵn, mè đen, sữa dừa béo giòn rụm.</td></tr>
+<tr><td>**4**</td><td>**13**</td><td>**Mứt Dừa Non Sữa Dừa**</td><td>Đặc Sản Từ Dừa</td><td>40.000</td><td>**34.000**</td><td>🔥 SALE (-15%)</td><td>Túi zip 250g, cùi dừa non mềm dẻo, ngọt thanh vị sữa dừa.</td></tr>
+<tr><td>**5**</td><td>**14**</td><td>**Chuối Khô Bọc Dừa Nạo**</td><td>Đặc Sản Từ Dừa</td><td>35.000</td><td>**35.000**</td><td>Standard</td><td>Hộp 300g, chuối xiêm chín ngào đường thốt nốt bọc dừa nạo.</td></tr>
+<tr><td>**6**</td><td>**15**</td><td>**Bánh Phồng Sơn Đốc Bến Tre**</td><td>Bánh Kẹo Dân Gian</td><td>30.000</td><td>**25.000**</td><td>🔥 SALE (-17%)</td><td>Bịch 10 cái phồng xốp làng nghề Sơn Đốc (Giồng Trôm).</td></tr>
+<tr><td>**7**</td><td>**16**</td><td>**Bánh Ít Lá Gai Dừa Đậu Xanh**</td><td>Bánh Kẹo Dân Gian</td><td>20.000</td><td>**20.000**</td><td>Standard</td><td>Hộp 4 cái, bột nếp lá gai thơm dẻo, nhân dừa đậu xanh ngọt bùi.</td></tr>
+<tr><td>**8**</td><td>**17**</td><td>**Kẹo Lạc Vừng Mạch Nha**</td><td>Bánh Kẹo Dân Gian</td><td>25.000</td><td>**25.000**</td><td>Standard</td><td>Gói 200g giòn tan, đậu phộng rang cát vàng và mè thơm.</td></tr>
+<tr><td>**9**</td><td>**18**</td><td>**Mứt Me Chua Ngọt Bến Tre**</td><td>Mứt & Trái Cây Sấy</td><td>30.000</td><td>**30.000**</td><td>Standard</td><td>Hũ 350g, me trái chín dốt ngào đường muối ớt cay nhẹ.</td></tr>
+<tr><td>**10**</td><td>**19**</td><td>**Mứt Gừng Dẻo Cay Nồng**</td><td>Mứt & Trái Cây Sấy</td><td>35.000</td><td>**35.000**</td><td>Standard</td><td>Hũ 250g, gừng tươi bào lát sấy dẻo giữ nguyên tính ấm.</td></tr>
+<tr><td>**11**</td><td>**20**</td><td>**Trái Cây Sấy Dẻo Thập Cẩm**</td><td>Mứt & Trái Cây Sấy</td><td>50.000</td><td>**42.000**</td><td>🔥 SALE (-16%)</td><td>Túi zip 300g: xoài cát, mít nghệ, chuối tiêu, đu đủ sấy dẻo.</td></tr>
+<tr><td>**12**</td><td>**21**</td><td>**Chả Lụa Heo Bến Tre**</td><td>Đặc Sản Mặn & Khô</td><td>65.000</td><td>**65.000**</td><td>Standard</td><td>Đòn 500g, thịt nạc heo tươi quết nhuyễn gói lá chuối hấp.</td></tr>
+<tr><td>**13**</td><td>**22**</td><td>**Tôm Khô Đất Rạch Gốc Bình Đại**</td><td>Đặc Sản Mặn & Khô</td><td>120.000</td><td>**99.000**</td><td>🔥 SALE (-18%)</td><td>Hộp 250g hút chân không, tôm đất tự nhiên biển Bình Đại ngọt đậm.</td></tr>
+<tr><td>**14**</td><td>**23**</td><td>**Khô Cá Lóc Đồng Tiêu Sọ**</td><td>Đặc Sản Mặn & Khô</td><td>85.000</td><td>**72.000**</td><td>🔥 SALE (-15%)</td><td>Bịch 500g hút chân không, cá lóc đồng tẩm ướp tiêu sọ cay thơm.</td></tr>
+<tr><td>**15**</td><td>**24**</td><td>**Nem Chua Bến Tre Gói Lá Ổi**</td><td>Đặc Sản Mặn & Khô</td><td>30.000</td><td>**24.000**</td><td>🔥 SALE (-20%)</td><td>Chùm 10 chiếc gói lá ổi non lên men tự nhiên, vị chua giòn.</td></tr>
+</table>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>CHƯƠNG 5: THIẾT KẾ XÂY DỰNG GIAO DIỆN THEO PHONG CÁCH BÁCH HOÁ XANH</h2>
+<br />
+<h3 class='subsec-title'>5.1. Bộ quy chuẩn nhận diện thương hiệu Bách Hoá Xanh</h3>
+<p>Giao diện website được thiết kế lại hoàn toàn dựa trên nhận diện thương hiệu của chuỗi siêu thị bán lẻ Bách Hoá Xanh:</p>
+<p>* <strong>Màu sắc chủ đạo:</strong> Xanh lá cây (<code>#008848</code>), Vàng chanh (<code>#fcd535</code>), Đỏ sale (<code>#ea1e25</code>), Xám nền trang nhã (<code>#f4f6f8</code>).</p>
+<p>* <strong>Header phong cách siêu thị liền mạch:</strong> Logo trắng viền nổi, ô tìm kiếm lớn ở trung tâm (<code>border-radius: 25px</code>), nút Giỏ hàng màu vàng chanh nổi bật có hiển thị tổng tiền và số món.</p>
+<p>* <strong>Top Announcement Bar:</strong> Thanh thông báo <code>ĐẶC QUYỀN HÔM NAY</code>: Miễn phí vận chuyển cho đơn hàng từ 200.000đ và cam kết giao nhanh 2 giờ tại Bến Tre.</p>
+<p><em> <strong>Thanh Icon Tab Ngành Hàng (Category Chips):</strong> 4 thẻ trắng bo tròn có icon sinh động: </em>Đặc Sản Dừa<em>, </em>Bánh Kẹo Dân Gian<em>, </em>Mứt & Trái Cây Sấy<em>, </em>Đặc Sản Mặn & Khô*.</p>
+<p>* <strong>Khối Flash Sale "GIỜ VÀNG GIÁ SỐC - SIÊU RẺ":</strong> Hộp nền đỏ rực rỡ, đồng hồ đếm ngược điện tử <code>08 : 45 : 18</code> cùng 4 sản phẩm giảm giá sâu nhất.</p>
+<p>* <strong>Thẻ sản phẩm (Product Card):</strong> Nền trắng bo tròn góc 12px, gắn nhãn OCOP Bến Tre, nhãn <code>SALE!</code> đỏ góc trên, giá bán niêm yết to màu đỏ, nút hành động: <strong><code>CHỌN MUA +</code></strong>.</p>
+<br />
+<hr class='page-divider' />
+<br />
+<h3 class='subsec-title'>5.2. Danh mục Hình ảnh Minh họa Từng Giao diện Hệ thống & Phân tích Thành phần</h3>
+<br />
+<p>Thư mục lưu trữ hình ảnh gốc chất lượng cao phục vụ chèn vào báo cáo Word / Slide:</p>
+<p><code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\</code></p>
+<br />
+<p>#### 5.2.1. Giao diện Trang chủ Bách Hóa Xanh (Homepage)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/01_trang_chu_bhx.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\01_trang_chu_bhx.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p><em> </em>Top Bar:* Dòng thông báo màu xanh đậm cam kết giao hàng 2h và freeship đơn > 200.000đ.</p>
+<p><em> </em>Header:* Thanh điều hướng xanh lá <code>#008848</code>, logo Bách Hóa Xanh Bến Tre, thanh tìm kiếm thông minh bo tròn viền xám nhạt, nút Giỏ hàng màu vàng chanh bắt mắt hiển thị số dư và số lượng hàng.</p>
+<p><em> </em>Category Bar (Ngành hàng):* 4 nút danh mục nhanh: Đặc Sản Dừa, Bánh Kẹo Dân Gian, Mứt & Trái Cây Sấy, Đặc Sản Mặn & Khô.</p>
+<p><em> </em>Flash Sale Block:* Khối đỏ <code>#ea1e25</code> nổi bật, đồng hồ đếm ngược thời gian thực, 4 sản phẩm giảm giá sốc nhất.</p>
+<p><em> </em>Lưới sản phẩm chính:* Bố cục 4 cột, mỗi sản phẩm hiển thị ảnh chụp thực tế vuông 1:1, tem OCOP Bến Tre, nhãn SALE đỏ, giá gốc gạch ngang và nút <code>CHỌN MUA +</code>.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/01_trang_chu_bhx.png' alt='Giao diện Trang chủ Bách Hóa Xanh' /><p class='figure-caption'>Giao diện Trang chủ Bách Hóa Xanh</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.2. Giao diện Cửa hàng Toàn bộ Sản phẩm (Shop Page)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/02_cua_hang_san_pham.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\02_cua_hang_san_pham.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p>* Hiển thị toàn bộ 15 sản phẩm chế biến Bến Tre theo dạng lưới khoa học.</p>
+<p>* Thanh sắp xếp (Sort dropdown): Sắp xếp theo mức độ phổ biến, điểm đánh giá, mới nhất, giá từ thấp đến cao, giá từ cao đến thấp.</p>
+<p>* Thanh phân trang (Pagination) tiện lợi khi số lượng sản phẩm mở rộng trong tương lai.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/02_cua_hang_san_pham.png' alt='Giao diện Cửa hàng Sản phẩm' /><p class='figure-caption'>Giao diện Cửa hàng Sản phẩm</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.3. Giao diện Trang Chi tiết Sản phẩm (Single Product Page)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/07_chi_tiet_nem_chua.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\07_chi_tiet_nem_chua.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p><em> </em>Hình ảnh lớn bên trái:* Ảnh thực tế món đặc sản (ví dụ: Nem Chua Bến Tre Gói Lá Ổi) sắc nét kèm tem OCOP.</p>
+<p><em> </em>Thông tin bên phải:* Tên sản phẩm in đậm, giá bán khuyến mãi màu đỏ kèm giá gốc gạch ngang, mô tả ngắn quy cách đóng gói và xuất xứ làng nghề.</p>
+<p><em> </em>Bộ chọn số lượng (Quantity Selector):* Tăng giảm số lượng linh hoạt.</p>
+<p><em> </em>Nút Thêm vào giỏ hàng:* Nút đỏ/xanh lớn <code>THÊM VÀO GIỎ HÀNG</code> bắt mắt.</p>
+<p><em> </em>Tab mô tả chi tiết & Đánh giá:* Thành phần, hướng dẫn sử dụng, hạn bảo quản và chứng nhận an toàn thực phẩm.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/07_chi_tiet_nem_chua.png' alt='Giao diện Chi tiết Sản phẩm' /><p class='figure-caption'>Giao diện Chi tiết Sản phẩm</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.4. Giao diện Giỏ hàng (Cart Page)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/05_gio_hang_co_san_pham.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\05_gio_hang_co_san_pham.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p><em> </em>Bảng danh sách mặt hàng:* Ảnh đại diện nhỏ, tên sản phẩm có liên kết, đơn giá, ô nhập số lượng, thành tiền, nút xóa món hàng <code>✕</code>.</p>
+<p><em> </em>Khung nhập mã ưu đãi (Coupon code):* Cho phép khách áp dụng mã giảm giá chiến dịch.</p>
+<p><em> </em>Khối Cộng giỏ hàng (Cart Totals):* Tạm tính, phí vận chuyển tính toán tự động, tổng thanh toán cuối cùng.</p>
+<p><em> </em>Nút Tiến hành thanh toán:* Nút bấm màu xanh đậm dẫn thẳng đến bước điền thông tin giao nhận.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/05_gio_hang_co_san_pham.png' alt='Giao diện Giỏ hàng' /><p class='figure-caption'>Giao diện Giỏ hàng</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.5. Giao diện Đặt hàng & Thanh toán (Checkout Page)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/06_thanh_toan_dien_form.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\06_thanh_toan_dien_form.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p><em> </em>Cột Thông tin thanh toán:* Các trường nhập Họ và tên, Tỉnh/Thành phố (Việt Nam), Địa chỉ nhận hàng, Số điện thoại người nhận, Địa chỉ Email, Ghi chú đơn hàng.</p>
+<p><em> </em>Cột Đơn hàng của bạn:* Liệt kê tóm tắt các món hàng, số lượng và tổng thanh toán.</p>
+<p><em> </em>Lựa chọn phương thức thanh toán:*</p>
+<p>* <strong>Trả tiền mặt khi nhận hàng (COD):</strong> Giao hàng tận tay mới thu tiền.</p>
+<p>* <strong>Chuyển khoản ngân hàng (BACS):</strong> Hiển thị số tài khoản Vietcombank để chuyển khoản trước.</p>
+<p><em> </em>Nút ĐẶT HÀNG:* Kích hoạt xác nhận và tạo đơn hàng chính thức vào cơ sở dữ liệu.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/06_thanh_toan_dien_form.png' alt='Giao diện Thanh toán Đặt hàng' /><p class='figure-caption'>Giao diện Thanh toán Đặt hàng</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.6. Giao diện Bảng điều khiển Quản trị (Admin Dashboard)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/08_quan_tri_dashboard.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\08_quan_tri_dashboard.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p>* Thanh menu điều hướng quản trị bên trái: Quản lý bài viết, Sản phẩm, WooCommerce, Giao diện, Plugin, Thành viên, Cài đặt.</p>
+<p>* Bảng tổng hợp trạng thái hệ thống, phiên bản WordPress 6.8, tình trạng máy chủ Apache/PHP.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/08_quan_tri_dashboard.png' alt='Giao diện Admin Dashboard' /><p class='figure-caption'>Giao diện Admin Dashboard</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.7. Giao diện Quản lý Danh mục Sản phẩm WooCommerce</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/09_quan_tri_danh_sach_san_pham.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\09_quan_tri_danh_sach_san_pham.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p>* Bảng danh sách 15 sản phẩm: Ảnh thu nhỏ, tên sản phẩm, tình trạng kho (Còn hàng), giá gốc và giá khuyến mãi, chuyên mục, ngày tạo.</p>
+<p>* Các nút thao tác nhanh: Chỉnh sửa (Edit), Sửa nhanh (Quick Edit), Xóa tạm (Trash), Xem sản phẩm ngoài frontend.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/09_quan_tri_danh_sach_san_pham.png' alt='Giao diện Quản trị Sản phẩm' /><p class='figure-caption'>Giao diện Quản trị Sản phẩm</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.8. Giao diện Quản lý Đơn hàng (WooCommerce Orders)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/10_quan_tri_don_hang.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\10_quan_tri_don_hang.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p>* Quản lý các đơn hàng khách vừa đặt trực tuyến: Mã đơn hàng, tên khách hàng, thời gian đặt, trạng thái đơn hàng (Tạm giữ, Đang xử lý, Đã hoàn thành), tổng tiền thanh toán.</p>
+<p>* Xem chi tiết địa chỉ giao hàng và in hóa đơn bán lẻ.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/10_quan_tri_don_hang.png' alt='Giao diện Quản lý Đơn hàng' /><p class='figure-caption'>Giao diện Quản lý Đơn hàng</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.9. Giao diện Thao tác Sao lưu & Phục hồi qua Xshell (CLI)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/11_xshell_sao_luu_phuc_hoi.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\11_xshell_sao_luu_phuc_hoi.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p>* Phiên SSH bảo mật kết nối tới cổng 2222 máy chủ Ubuntu Server.</p>
+<p><em> Nhật ký chạy lệnh <code>bash /home/bentre/backup.sh</code> xuất dữ liệu <code>db_thucpham_</em>.sql</code> và <code>files_thucpham_*.tar.gz</code>.</p>
+<p>* Nhật ký chạy lệnh khôi phục <code>bash /home/bentre/restore.sh</code> tự động tạo lại DB, nạp dữ liệu sạch, giải nén mã nguồn, phân quyền <code>www-data</code> và kiểm tra HTTP 200 OK.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/11_xshell_sao_luu_phuc_hoi.png' alt='Giao diện Xshell' /><p class='figure-caption'>Giao diện Xshell</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<p>#### 5.2.10. Giao diện Truyền Tệp Tin Ngoại Vi qua Xftp (SFTP GUI)</p>
+<p>* <strong>Tệp hình ảnh:</strong> <code>hinh_anh_giao_dien/12_xftp_truyen_file_sftp.png</code></p>
+<p>* <strong>Đường dẫn tuyệt đối:</strong> <code>C:\Users\Admin\source\repos\Profile_NhanPhu\hinh_anh_giao_dien\12_xftp_truyen_file_sftp.png</code></p>
+<p>* <strong>Mô tả thành phần giao diện:</strong></p>
+<p>* Giao diện hai khung trực quan: Bên trái là thư mục sao lưu trên máy Windows (<code>C:\Users\Admin\source\repos\Profile_NhanPhu\backups\</code>), bên phải là thư mục <code>/home/bentre/backups/</code> trên máy chủ Ubuntu.</p>
+<p>* Thao tác kéo thả tập tin 2 chiều: Download bản sao lưu về máy để lưu trữ an toàn và Upload bản sao lưu lên máy chủ khi cần phục hồi.</p>
+<br />
+<div class='figure-box'><img src='../../scr/hinh_anh_giao_dien/12_xftp_truyen_file_sftp.png' alt='Giao diện Xftp' /><p class='figure-caption'>Giao diện Xftp</p></div>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>CHƯƠNG 6: QUY TRÌNH SAO LƯU & PHỤC HỒI DỮ LIỆU QUA XSHELL VÀ XFTP</h2>
+<br />
+<p>Việc sao lưu (Backup) định kỳ và có quy trình phục hồi (Disaster Recovery) thử nghiệm là yêu cầu sống còn của bất kỳ hệ thống thương mại điện tử nào để đề phòng sự cố hỏng hóc phần cứng, lỗi cập nhật phần mềm hoặc tấn công mạng.</p>
+<br />
+<p><code></code>`mermaid</p>
+<p>sequenceDiagram</p>
+<p>autonumber</p>
+<p>actor Admin as Quản Trị Viên (Windows PC)</p>
+<p>participant Xshell as Xshell 7 (SSH Client)</p>
+<p>participant Xftp as Xftp 7 (SFTP GUI)</p>
+<p>participant Server as Ubuntu Server (LAMP VM)</p>
+<p>participant LocalDisk as Ổ cứng cục bộ (Windows)</p>
+<br />
+<p>Note over Admin, Server: GIAI ĐOẠN 1: SAO LƯU DỮ LIỆU (BACKUP)</p>
+<p>Admin->>Xshell: Kết nối SSH: 127.0.0.1:2222 (User: bentre)</p>
+<p>Admin->>Xshell: Thực thi script sao lưu: bash /home/bentre/backup.sh</p>
+<p>Server->>Server: mysqldump xuất db_thucpham_*.sql</p>
+<p>Server->>Server: tar -czf nén files_thucpham_*.tar.gz</p>
+<p>Server-->>Xshell: Báo hoàn tất sao lưu vào /home/bentre/backups/</p>
+<p>Admin->>Xftp: Kết nối SFTP: 127.0.0.1:2222</p>
+<p>Xftp->>Server: Mở thư mục /home/bentre/backups/</p>
+<p>Admin->>Xftp: Kéo thả file .sql và .tar.gz về máy</p>
+<p>Xftp->>LocalDisk: Lưu file an toàn tại C:\Users\Admin\source\repos\Profile_NhanPhu\backups\</p>
+<br />
+<p>Note over Admin, Server: GIAI ĐOẠN 2: PHỤC HỒI DỮ LIỆU (RESTORE)</p>
+<p>Admin->>Xftp: Tải bản backup từ Windows lên /home/bentre/backups/</p>
+<p>Admin->>Xshell: Thực thi script phục hồi: bash /home/bentre/restore.sh</p>
+<p>Server->>Server: mysql import khôi phục CSDL MySQL</p>
+<p>Server->>Server: tar giải nén đè mã nguồn vào /var/www/html/thucpham/</p>
+<p>Server->>Server: sudo chown -R www-data:www-data & reload Apache</p>
+<p>Server-->>Xshell: Báo phục hồi thành công 100%!</p>
+<p><code></code>`</p>
+<br />
+<h3 class='subsec-title'>6.1. Chi tiết các bước thực hiện qua phần mềm Xshell</h3>
+<p>1. <strong>Khởi động Xshell</strong> $\rightarrow$ Chọn <strong>File</strong> $\rightarrow$ <strong>New</strong> để tạo phiên kết nối mới:</p>
+<p>* <strong>Host:</strong> <code>127.0.0.1</code> | <strong>Port:</strong> <code>2222</code> | <strong>Protocol:</strong> <code>SSH</code>.</p>
+<p>* <strong>Authentication:</strong> Nhập User: <code>bentre</code> | Password: <code>Admin@2026</code>.</p>
+<p>2. <strong>Thực hiện Sao lưu (Backup):</strong></p>
+<p>* Trong cửa sổ dòng lệnh Xshell, gõ:</p>
+<p><code></code>`bash</p>
+<p>bash /home/bentre/backup.sh</p>
+<p><code></code>`</p>
+<p>* Hệ thống tự động trích xuất CSDL MySQL bằng tiện ích <code>mysqldump</code> và đóng gói toàn bộ thư mục <code>/var/www/html/thucpham</code> bằng tiện ích <code>tar</code>.</p>
+<p>* Kiểm tra các bản sao lưu đã tạo:</p>
+<p><code></code>`bash</p>
+<p>ls -lh /home/bentre/backups/</p>
+<p><code></code>`</p>
+<p>3. <strong>Thực hiện Phục hồi (Restore):</strong></p>
+<p>* Khi cần phục hồi dữ liệu từ bản sao lưu gần nhất, gõ:</p>
+<p><code></code>`bash</p>
+<p>bash /home/bentre/restore.sh</p>
+<p><code></code>`</p>
+<p>* Hoặc chỉ định cụ thể file CSDL và file mã nguồn:</p>
+<p><code></code>`bash</p>
+<p>bash /home/bentre/restore.sh /home/bentre/backups/db_thucpham_20260914_092100.sql /home/bentre/backups/files_thucpham_20260914_092100.tar.gz</p>
+<p><code></code>`</p>
+<br />
+<h3 class='subsec-title'>6.2. Chi tiết các bước thực hiện qua phần mềm Xftp</h3>
+<p>1. <strong>Khởi động Xftp</strong> $\rightarrow$ Nhấn biểu tượng kết nối nhanh (hoặc bấm biểu tượng Xftp tích hợp trực tiếp trên thanh công cụ của Xshell).</p>
+<p>2. Thiết lập kết nối:</p>
+<p>* <strong>Host:</strong> <code>127.0.0.1</code> | <strong>Port:</strong> <code>2222</code> | <strong>Protocol:</strong> <code>SFTP</code>.</p>
+<p>* <strong>Username:</strong> <code>bentre</code> | <strong>Password:</strong> <code>Admin@2026</code>.</p>
+<p>3. <strong>Thao tác tải bản sao lưu về máy tính (Download Backup):</strong></p>
+<p>* Cửa sổ bên trái (Local Computer): Điều hướng tới thư mục lưu trữ: <code>C:\Users\Admin\source\repos\Profile_NhanPhu\backups\</code>.</p>
+<p>* Cửa sổ bên phải (Remote Host): Mở thư mục <code>/home/bentre/backups/</code>.</p>
+<p><em> Chọn hai tệp: <code>db_thucpham_</em>.sql</code> và <code>files_thucpham_*.tar.gz</code>, nhấp chuột phải chọn <strong>Download</strong> (hoặc kéo thả sang bên trái).</p>
+<p>4. <strong>Thao tác đưa bản sao lưu lên máy chủ khi cần phục hồi (Upload Restore):</strong></p>
+<p>* Kéo tệp sao lưu từ máy Windows sang thư mục <code>/home/bentre/backups/</code> trên máy ảo Linux.</p>
+<br />
+<hr class='page-divider' />
+<br />
+<h2 class='sec-title'>CHƯƠNG 7: KẾT LUẬN & HƯỚNG PHÁT TRIỂN ĐỀ TÀI</h2>
+<br />
+<h3 class='subsec-title'>7.1. Kết quả đạt được</h3>
+<p>* Đã triển khai thành công 100% hệ thống máy chủ ảo LAMP stack trên nền tảng mã nguồn mở Ubuntu 22.04 LTS.</p>
+<p>* Cài đặt và cấu hình hoàn chỉnh CMS WordPress và plugin WooCommerce, vận hành mượt mà với đơn vị tiền tệ VNĐ và 2 phương thức thanh toán thực tế (COD và chuyển khoản ngân hàng).</p>
+<p>* Hoàn thiện danh mục 15 sản phẩm đặc sản chế biến Bến Tre kèm ảnh món ăn thực tế sắc nét, đầy đủ thông tin xuất xứ và nhãn OCOP.</p>
+<p>* Chuyển đổi giao diện thành công theo nhận diện thương hiệu chuỗi siêu thị thực phẩm Bách Hoá Xanh (màu xanh lá, giỏ hàng vàng chanh, nút CHỌN MUA, thanh ngành hàng, flash sale).</p>
+<p>* Tự động hóa và kiểm chứng thành công quy trình Sao lưu & Phục hồi dữ liệu qua Xshell và Xftp.</p>
+<br />
+<h3 class='subsec-title'>7.2. Hướng phát triển trong tương lai</h3>
+<p>* Cài đặt chứng chỉ số SSL/TLS (Let's Encrypt HTTPS) bảo mật kết nối.</p>
+<p>* Tích hợp cổng thanh toán trực tuyến qua cổng MoMo / VNPay / ZaloPay Sandbox.</p>
+<p>* Mở rộng tính năng theo dõi lộ trình giao hàng trực tuyến (Live Order Tracking).</p>
+<br />
+</body>
+</html>
