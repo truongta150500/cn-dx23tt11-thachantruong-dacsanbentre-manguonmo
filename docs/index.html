@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặc Sản Bến Tre - Bách Hóa Xanh Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #008848;
+      --primary-dark: #005c30;
+      --accent: #fcd535;
+      --danger: #ea1e25;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f1f5f9; color: var(--dark); }
+
+    /* Top banner bar */
+    .top-notice {
+      background: var(--primary-dark);
+      color: #fff;
+      text-align: center;
+      padding: 6px 16px;
+      font-size: 13px;
+    }
+    .top-notice a { color: var(--accent); font-weight: bold; text-decoration: none; margin-left: 8px; }
+
+    /* Main Header */
+    header {
+      background: var(--primary);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo-badge {
+      background: var(--accent);
+      color: var(--dark);
+      font-weight: 800;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+    .logo-title { font-size: 17px; font-weight: 700; }
+
+    .search-box {
+      flex: 1;
+      max-width: 500px;
+      position: relative;
+    }
+    .search-input {
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .cart-btn {
+      background: var(--accent);
+      color: var(--dark);
+      font-weight: 700;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      transition: transform 0.15s;
+    }
+    .cart-btn:hover { transform: scale(1.04); }
+    .cart-count {
+      background: var(--danger);
+      color: #fff;
+      border-radius: 50%;
+      padding: 2px 7px;
+      font-size: 12px;
+    }
+
+    /* Navigation / Tabs */
+    .nav-tabs {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      gap: 20px;
+      padding: 0 16px;
+    }
+    .tab-item {
+      padding: 12px 8px;
+      font-weight: 600;
+      font-size: 14px;
+      color: #64748b;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+    }
+    .tab-item.active {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    /* Main Content Container */
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+
+    /* Flash Sale Banner */
+    .flash-sale {
+      background: linear-gradient(90deg, #ea1e25 0%, #ff4b55 100%);
+      color: #fff;
+      border-radius: 8px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 14px rgba(234,30,37,0.25);
+    }
+    .flash-title { font-size: 18px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+    .countdown {
+      background: rgba(0,0,0,0.25);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    /* Filter Chips */
+    .category-chips {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .chip {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13.5px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .chip.active, .chip:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .product-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 8px 20px rgba(0, 136, 72, 0.12);
+      transform: translateY(-3px);
+    }
+    .sale-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: var(--danger);
+      color: #fff;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .product-img-box {
+      width: 100%;
+      height: 170px;
+      background: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .product-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .product-info {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .product-name {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+      height: 36px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .product-ocop {
+      font-size: 11px;
+      color: var(--primary-dark);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .product-price-row {
+      margin-top: auto;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .price-sale { font-size: 16px; font-weight: 800; color: var(--danger); }
+    .price-orig { font-size: 12px; color: #94a3b8; text-decoration: line-through; }
+    .buy-btn {
+      background: #fff;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.15s;
+    }
+    .buy-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* Cart Modal / Drawer */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 200;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: #fff;
+      width: 90%;
+      max-width: 520px;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .modal-title { font-size: 18px; font-weight: 700; color: var(--primary-dark); }
+    .close-btn { background: none; border: none; font-size: 20px; cursor: pointer; }
+
+    .cart-items { margin-bottom: 16px; }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .qty-btn {
+      background: #e2e8f0;
+      border: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .checkout-btn {
+      background: var(--danger);
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+      margin-top: 12px;
+    }
+
+    /* Thesis Report Tab View */
+    .thesis-view { display: none; }
+    .thesis-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 13px;
+      margin-top: 40px;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <div class="top-notice">
+    Đồ án chuyên ngành: Xây dựng Website bán thực phẩm chế biến trên nền tảng các phần mềm mã nguồn mở |
+    <strong>SV: Thạch An Trường - MSSV: 170123678 - Lớp: DX23TT11</strong> |
+    <a href="https://github.com/truongta150500/cn-dx23tt11-thachantruong-dacsanbentre-manguonmo" target="_blank">Xem GitHub Repository ↗</a>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="logo-box" onclick="showTab('shop')">
+        <span class="logo-badge">BÁCH HÓA XANH</span>
+        <span class="logo-title">ĐẶC SẢN BẾN TRE OCOP</span>
+      </a>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm kẹo dừa, nem chua, bánh phồng tôm..." oninput="filterProducts()" />
+      </div>
+
+      <div class="header-actions">
+        <button class="cart-btn" onclick="openCart()">
+          <span>GIỎ HÀNG</span>
+          <span class="cart-count" id="cartCount">0</span>
+          <span id="cartTotalHeader">0 đ</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="nav-tabs">
+    <div class="nav-inner">
+      <div class="tab-item active" id="tabShop" onclick="showTab('shop')">Cửa Hàng 15 Đặc Sản OCOP</div>
+      <div class="tab-item" id="tabDoc" onclick="showTab('doc')">Tài Liệu Đồ Án & Tải File (Word, PDF, PPTX)</div>
+      <div class="tab-item" id="tabArch" onclick="showTab('arch')">Kiến Trúc LAMP & Kịch Bản Sao Lưu</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- SHOP SECTION -->
+    <div id="shopSection">
+      <!-- Flash Sale -->
+      <div class="flash-sale">
+        <div class="flash-title">
+          <span>⚡ FLASH SALE ĐẶC SẢN HÔM NAY</span>
+          <span style="font-size: 13px; font-weight: normal; margin-left: 10px;">Cam kết 100% chính gốc làng nghề Bến Tre</span>
+        </div>
+        <div class="countdown" id="timer">KẾT THÚC TRONG 05:42:19</div>
+      </div>
+
+      <!-- Categories -->
+      <div class="category-chips">
+        <button class="chip active" onclick="filterCategory('Tất cả', this)">Tất cả (15 món)</button>
+        <button class="chip" onclick="filterCategory('Đặc Sản Từ Dừa', this)">Đặc Sản Từ Dừa</button>
+        <button class="chip" onclick="filterCategory('Bánh Kẹo Truyền Thống', this)">Bánh Kẹo Dân Gian</button>
+        <button class="chip" onclick="filterCategory('Mứt & Trái Cây Sấy', this)">Mứt & Trái Cây Sấy</button>
+        <button class="chip" onclick="filterCategory('Thực Phẩm Chế Biến', this)">Thủy Sản Khô & Nem Chua</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+
+    <!-- THESIS / DOCUMENTS SECTION -->
+    <div id="docSection" class="thesis-view">
+      <div class="thesis-card">
+        <h2 style="color: var(--primary); margin-bottom: 12px;">HỒ SƠ BÁO CÁO ĐỒ ÁN CHUYÊN NGÀNH</h2>
+        <p style="margin-bottom: 16px;"><strong>Đề tài:</strong> Xây dựng Website bán thực phẩm chế biến trên nền tảng các phần mềm mã nguồn mở</p>
+        <p style="margin-bottom: 8px;"><strong>Sinh viên:</strong> THẠCH AN TRƯỜNG &bull; <strong>MSSV:</strong> 170123678 &bull; <strong>Lớp:</strong> DX23TT11 &bull; <strong>SĐT:</strong> 0329886903</p>
+        <p style="margin-bottom: 20px;"><strong>Giảng viên hướng dẫn:</strong> ThS. Nguyễn Hoàng Duy Thiện (thiennhd@tvu.edu.vn)</p>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="https://github.com/truongta150500/cn-dx23tt11-thachantruong-dacsanbentre-manguonmo/raw/main/thesis/doc/265b35aca84ef16af3f71d878fd91f488bc99f03.docx" class="buy-btn" style="text-decoration: none; padding: 10px 16px; width: auto; background: var(--primary); color: #fff;">Tải Báo Cáo Word (.DOCX) ⬇</a>
+          <a href="https://github.com/truongta150500/cn-dx23tt11-thachantruong-dacsanbentre-manguonmo/raw/main/thesis/pdf/BAO_CAO_DO_AN_THUCPHAM_BENTRE.pdf" class="buy-btn" style="text-decoration: none; padding: 10px 16px; width: auto; background: var(--danger); color: #fff;">Tải Bản In PDF (.PDF) ⬇</a>
+          <a href="https://github.com/truongta150500/cn-dx23tt11-thachantruong-dacsanbentre-manguonmo/raw/main/thesis/abs/SLIDE_THUYET_TRINH_DO_AN.pptx" class="buy-btn" style="text-decoration: none; padding: 10px 16px; width: auto; background: var(--primary-dark); color: #fff;">Tải 20 Slide Thuyết Trình (.PPTX) ⬇</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARCHITECTURE SECTION -->
+    <div id="archSection" class="thesis-view">
+      <div class="thesis-card">
+        <h2 style="color: var(--primary); margin-bottom: 12px;">HẠ TẦNG LAMP STACK & SAO LƯU PHỤC HỒI</h2>
+        <p style="margin-bottom: 12px;">Hệ thống chạy trên máy chủ ảo Linux Ubuntu 22.04 LTS, Apache 2.4, MySQL 8.0, PHP 8.1 và WordPress 6.8.</p>
+        <p style="margin-bottom: 8px;"><strong>Cổng mạng NAT:</strong> Cổng 8080 duyệt Web, Cổng 2222 kết nối Xshell/Xftp.</p>
+        <p style="margin-bottom: 8px;"><strong>Kịch bản sao lưu:</strong> <code>bash /home/bentre/backup.sh</code> (mysqldump + tar czf).</p>
+        <p style="margin-bottom: 8px;"><strong>Kịch bản phục hồi:</strong> <code>bash /home/bentre/restore.sh</code> (khôi phục thảm họa &lt; 15 giây).</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- CART MODAL -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">GIỎ HÀNG CỦA BẠN</h3>
+        <button class="close-btn" onclick="closeCart()">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItemsList"></div>
+      <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 16px; margin-top: 16px;">
+        <span>Tổng thanh toán:</span>
+        <span style="color: var(--danger);" id="cartTotalModal">0 đ</span>
+      </div>
+      <button class="checkout-btn" onclick="openCheckout()">TIẾN HÀNH ĐẶT HÀNG (COD)</button>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">THÔNG TIN GIAO HÀNG (COD)</h3>
+        <button class="close-btn" onclick="closeCheckout()">&times;</button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <input type="text" id="custName" class="search-input" style="border: 1px solid var(--border);" placeholder="Họ và tên người nhận" value="Thạch An Trường" />
+        <input type="text" id="custPhone" class="search-input" style="border: 1px solid var(--border);" placeholder="Số điện thoại liên hệ" value="0329886903" />
+        <input type="text" id="custAddress" class="search-input" style="border: 1px solid var(--border);" placeholder="Địa chỉ giao hàng tại Bến Tre / Toàn quốc" value="Trường Đại học Trà Vinh" />
+        <div style="background: #f8fafc; padding: 10px; border-radius: 6px; font-size: 13px;">
+          <strong>Phương thức thanh toán:</strong><br>
+          ☑ Trả tiền mặt khi nhận hàng (COD tận nơi)
+        </div>
+        <button class="checkout-btn" onclick="confirmOrder()">XÁC NHẬN ĐẶT HÀNG NGAY</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Đồ án: Xây dựng Website bán thực phẩm chế biến trên nền tảng các phần mềm mã nguồn mở</p>
+    <p>Sinh viên: Thạch An Trường - MSSV: 170123678 - Khoa KT&CN, Trường Đại học Trà Vinh</p>
+    <p style="margin-top: 6px;">Xem mã nguồn trên <a href="https://github.com/truongta150500/cn-dx23tt11-thachantruong-dacsanbentre-manguonmo" target="_blank">GitHub Repository</a></p>
+  </footer>
+
+  <script>
+    const products = [{"id": 1, "name": "Kẹo dừa sáp sầu riêng Bến Tre", "category": "Đặc Sản Từ Dừa", "price": 65000, "orig_price": 75000, "ocop": "4 sao", "origin": "Châu Thành, Bến Tre", "img": "img/02_cua_hang_san_pham.png"}, {"id": 2, "name": "Mứt dừa non truyền thống ít đường", "category": "Đặc Sản Từ Dừa", "price": 85000, "orig_price": 95000, "ocop": "3 sao", "origin": "Mỏ Cày Nam, Bến Tre", "img": "img/03_danh_muc_banh_dac_san.png"}, {"id": 3, "name": "Rượu dừa đóng bình hồ lô Bến Tre", "category": "Đặc Sản Từ Dừa", "price": 135000, "orig_price": 150000, "ocop": "4 sao", "origin": "Giồng Trôm, Bến Tre", "img": "img/04_danh_muc_che_pham_dua.png"}, {"id": 4, "name": "Thạch dừa xiêm Bến Tre giòn ngọt", "category": "Đặc Sản Từ Dừa", "price": 35000, "orig_price": 40000, "ocop": "3 sao", "origin": "TP. Bến Tre", "img": "img/01_trang_chu.png"}, {"id": 5, "name": "Bánh tráng sữa dừa sầu riêng", "category": "Bánh Kẹo Truyền Thống", "price": 45000, "orig_price": 50000, "ocop": "3 sao", "origin": "Làng nghề Mỹ Lồng, Giồng Trôm", "img": "img/02_cua_hang_toan_bo_san_pham.png"}, {"id": 6, "name": "Bánh phồng tôm Sơn Đốc Bến Tre", "category": "Bánh Kẹo Truyền Thống", "price": 75000, "orig_price": 85000, "ocop": "4 sao", "origin": "Làng nghề Sơn Đốc, Hưng Nhượng", "img": "img/04_danh_muc_banh_dac_san.png"}, {"id": 7, "name": "Bánh kẹp cuốn nước cốt dừa", "category": "Bánh Kẹo Truyền Thống", "price": 50000, "orig_price": 55000, "ocop": "3 sao", "origin": "Chợ Lách, Bến Tre", "img": "img/03_chi_tiet_san_pham.png"}, {"id": 8, "name": "Kẹo chuối cuộn đậu phộng Bến Tre", "category": "Bánh Kẹo Truyền Thống", "price": 45000, "orig_price": 50000, "ocop": "3 sao", "origin": "Bình Đại, Bến Tre", "img": "img/03_danh_muc_banh_dac_san.png"}, {"id": 9, "name": "Chuối sấy dẻo Bến Tre túi zip", "category": "Mứt & Trái Cây Sấy", "price": 40000, "orig_price": 45000, "ocop": "3 sao", "origin": "Ba Tri, Bến Tre", "img": "img/01_trang_chu_bhx.png"}, {"id": 10, "name": "Xoài sấy dẻo Chợ Lách Bến Tre", "category": "Mứt & Trái Cây Sấy", "price": 65000, "orig_price": 75000, "ocop": "4 sao", "origin": "Chợ Lách, Bến Tre", "img": "img/02_cua_hang_san_pham.png"}, {"id": 11, "name": "Mứt gừng dẻo lăn mè Bến Tre", "category": "Mứt & Trái Cây Sấy", "price": 55000, "orig_price": 60000, "ocop": "3 sao", "origin": "Châu Thành, Bến Tre", "img": "img/03_chi_tiet_san_pham.png"}, {"id": 12, "name": "Nem chua Bến Tre gói lá ổi", "category": "Thực Phẩm Chế Biến", "price": 55000, "orig_price": 65000, "ocop": "4 sao", "origin": "Lò Nem Ba Tri, Bến Tre", "img": "img/07_chi_tiet_nem_chua.png"}, {"id": 13, "name": "Tôm khô Ba Tri Bến Tre loại 1", "category": "Thực Phẩm Chế Biến", "price": 220000, "orig_price": 250000, "ocop": "4 sao", "origin": "Cảng cá Ba Tri, Bến Tre", "img": "img/02_cua_hang_san_pham.png"}, {"id": 14, "name": "Cá sặc rằn một nắng Bến Tre", "category": "Thực Phẩm Chế Biến", "price": 140000, "orig_price": 160000, "ocop": "3 sao", "origin": "Thạnh Phú, Bến Tre", "img": "img/04_danh_muc_banh_dac_san.png"}, {"id": 15, "name": "Khô cá lóc đồng ướp tiêu sọ", "category": "Thực Phẩm Chế Biến", "price": 150000, "orig_price": 170000, "ocop": "4 sao", "origin": "Mỏ Cày Bắc, Bến Tre", "img": "img/07_chi_tiet_san_pham.png"}];
+    let cart = [];
+    let currentCategory = 'Tất cả';
+
+    function renderProducts(list) {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = '';
+      list.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <div class="sale-badge">SALE</div>
+          <div class="product-img-box">
+            <img src="${p.img}" alt="${p.name}" onerror="this.src='img/02_cua_hang_san_pham.png'" />
+          </div>
+          <div class="product-info">
+            <div class="product-name" title="${p.name}">${p.name}</div>
+            <div class="product-ocop">★ ${p.ocop} &bull; ${p.origin}</div>
+            <div class="product-price-row">
+              <span class="price-sale">${p.price.toLocaleString('vi-VN')} đ</span>
+              <span class="price-orig">${p.orig_price.toLocaleString('vi-VN')} đ</span>
+            </div>
+            <button class="buy-btn" onclick="addToCart(${p.id})">CHỌN MUA +</button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    function filterProducts() {
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = products.filter(p => {
+        const matchCat = (currentCategory === 'Tất cả') || (p.category === currentCategory);
+        const matchQuery = p.name.toLowerCase().includes(query) || p.origin.toLowerCase().includes(query);
+        return matchCat && matchQuery;
+      });
+      renderProducts(filtered);
+    }
+
+    function addToCart(id) {
+      const p = products.find(item => item.id === id);
+      const exist = cart.find(item => item.id === id);
+      if (exist) {
+        exist.qty += 1;
+      } else {
+        cart.push({ ...p, qty: 1 });
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+      const totalPrice = cart.reduce((s, i) => s + (i.qty * i.price), 0);
+
+      document.getElementById('cartCount').innerText = totalQty;
+      document.getElementById('cartTotalHeader').innerText = totalPrice.toLocaleString('vi-VN') + ' đ';
+      document.getElementById('cartTotalModal').innerText = totalPrice.toLocaleString('vi-VN') + ' đ';
+
+      const list = document.getElementById('cartItemsList');
+      if (cart.length === 0) {
+        list.innerHTML = '<p style="text-align:center; color:#94a3b8; padding:20px;">Giỏ hàng đang trống</p>';
+      } else {
+        list.innerHTML = cart.map(i => `
+          <div class="cart-item">
+            <div>
+              <div style="font-weight:600; font-size:14px;">${i.name}</div>
+              <div style="font-size:12px; color:var(--danger);">${i.price.toLocaleString('vi-VN')} đ</div>
+            </div>
+            <div class="qty-controls">
+              <button class="qty-btn" onclick="changeQty(${i.id}, -1)">-</button>
+              <span style="font-weight:bold; min-width:20px; text-align:center;">${i.qty}</span>
+              <button class="qty-btn" onclick="changeQty(${i.id}, 1)">+</button>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    function changeQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) {
+          cart = cart.filter(i => i.id !== id);
+        }
+      }
+      updateCartUI();
+    }
+
+    function openCart() { document.getElementById('cartModal').classList.add('active'); }
+    function closeCart() { document.getElementById('cartModal').classList.remove('active'); }
+
+    function openCheckout() {
+      if (cart.length === 0) {
+        alert('Vui lòng chọn ít nhất 1 sản phẩm trước khi thanh toán!');
+        return;
+      }
+      closeCart();
+      document.getElementById('checkoutModal').classList.add('active');
+    }
+    function closeCheckout() { document.getElementById('checkoutModal').classList.remove('active'); }
+
+    function confirmOrder() {
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const addr = document.getElementById('custAddress').value;
+      alert(`ĐẶT HÀNG THÀNH CÔNG!\n\nNgười nhận: ${name}\nSố điện thoại: ${phone}\nĐịa chỉ: ${addr}\nPhương thức: Thanh toán khi nhận hàng (COD)\n\nĐơn hàng đã được lưu và gửi cho cửa hàng xử lý!`);
+      cart = [];
+      updateCartUI();
+      closeCheckout();
+    }
+
+    function showTab(tab) {
+      document.getElementById('tabShop').classList.remove('active');
+      document.getElementById('tabDoc').classList.remove('active');
+      document.getElementById('tabArch').classList.remove('active');
+
+      document.getElementById('shopSection').style.display = 'none';
+      document.getElementById('docSection').style.display = 'none';
+      document.getElementById('archSection').style.display = 'none';
+
+      if (tab === 'shop') {
+        document.getElementById('tabShop').classList.add('active');
+        document.getElementById('shopSection').style.display = 'block';
+      } else if (tab === 'doc') {
+        document.getElementById('tabDoc').classList.add('active');
+        document.getElementById('docSection').style.display = 'block';
+      } else {
+        document.getElementById('tabArch').classList.add('active');
+        document.getElementById('archSection').style.display = 'block';
+      }
+    }
+
+    // Init
+    renderProducts(products);
+    updateCartUI();
+  </script>
+</body>
+</html>
