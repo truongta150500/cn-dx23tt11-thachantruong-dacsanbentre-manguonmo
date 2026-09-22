@@ -10,7 +10,8 @@
 * **Mã số sinh viên (MSSV):** **170123678**
 * **Số điện thoại:** **0329886903**
 * **Email:** **truongta150500@sv-onuni.edu.vn**
-* **GitHub Repository:** `cn-da17tta-thachantruong-thucpham-bentree`
+* **Lớp:** **DX23TT11**
+* **GitHub Repository:** `cn-dx23tt11-thachantruong-dacsanbentre-manguonmo`
 
 ---
 
