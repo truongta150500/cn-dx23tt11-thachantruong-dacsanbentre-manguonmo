@@ -1,7 +1,7 @@
 # TÓM TẮT ĐỒ ÁN (PROJECT ABSTRACT)
 
 ## THÔNG TIN TÁC GIẢ & ĐỀ TÀI
-* **Tên đề tài:** Xây dựng Website bán thực phẩm chế biến đặc sản Bến Tre trên máy chủ mã nguồn mở LAMP và WordPress (Ứng dụng mô hình Bách Hóa Xanh & Sao lưu/Phục hồi qua Xshell, Xftp)
+* **Tên đề tài:** Xây dựng Website bán thực phẩm chế biến trên nền tảng các phần mềm mã nguồn mở (Ứng dụng mô hình Bách Hóa Xanh & Sao lưu/Phục hồi qua Xshell, Xftp)
 * **Sinh viên thực hiện:** Thạch An Trường
 * **Mã số sinh viên (MSSV):** 170123678
 * **Số điện thoại:** 0329886903

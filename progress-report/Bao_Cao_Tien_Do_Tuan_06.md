@@ -3,7 +3,7 @@
 * **Họ và tên sinh viên:** Thạch An Trường
 * **Mã số sinh viên:** 170123678
 * **Số điện thoại:** 0329886903 | **Email:** truongta150500@sv-onuni.edu.vn
-* **Đề tài:** Website bán thực phẩm chế biến trên máy chủ mã nguồn mở LAMP và WordPress
+* **Đề tài:** Xây dựng Website bán thực phẩm chế biến trên nền tảng các phần mềm mã nguồn mở
 * **Thời gian thực hiện:** Tuần 06
 
 ---
