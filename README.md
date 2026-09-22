@@ -12,7 +12,7 @@
 * **Email:** **truongta150500@sv-onuni.edu.vn**
 * **Lớp:** **DX23TT11**
 * **GitHub Repository:** `cn-dx23tt11-thachantruong-dacsanbentre-manguonmo`
-* **Giảng viên hướng dẫn:** Thầy Nguyễn Hứa Duy Thiện (Email: thiennhd@tvu.edu.vn | GitHub: @thiennhd)
+* **Giảng viên hướng dẫn:** Thầy Nguyễn Hoàng Duy Thiện (Email: thiennhd@tvu.edu.vn | GitHub: @thiennhd)
 
 ---
 

@@ -6,6 +6,7 @@
 * **Mã số sinh viên (MSSV):** 170123678
 * **Số điện thoại:** 0329886903
 * **Email:** truongta150500@sv-onuni.edu.vn
+* **Giảng viên hướng dẫn:** ThS. Nguyễn Hoàng Duy Thiện
 * **Đơn vị đào tạo:** Khoa Kỹ thuật và Công nghệ - Trường Đại học Trà Vinh
 
 ---
