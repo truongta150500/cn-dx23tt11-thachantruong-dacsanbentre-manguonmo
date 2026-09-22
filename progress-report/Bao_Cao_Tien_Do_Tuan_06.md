@@ -1,20 +1,18 @@
-# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUAN_06
+# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUẦN 06
 
-* **Sinh viên thực hiện:** Thạch An Trường
+* **Họ và tên sinh viên:** Thạch An Trường
 * **Mã số sinh viên:** 170123678
 * **Số điện thoại:** 0329886903 | **Email:** truongta150500@sv-onuni.edu.vn
-* **Đề tài:** Website TMĐT Đặc Sản Bến Tre trên LAMP Stack & WordPress (Giao diện Bách Hóa Xanh)
-* **Thời gian thực hiện:** Tuan 06
+* **Đề tài:** Website bán thực phẩm chế biến trên máy chủ mã nguồn mở LAMP và WordPress
+* **Thời gian thực hiện:** Tuần 06
 
 ---
 
-## 1. MỤC TIÊU CÔNG VIỆC TRONG TUẦN
-* Nhiệm vụ chính: **Hoàn thiện quy trình Giỏ hàng & Đặt hàng COD**
+## 1. NỘI DUNG CÔNG VIỆC TRONG TUẦN
+* **Trọng tâm:** Nhiệm vụ 4 (Phần 2): Minh họa quy trình đặt hàng và thanh toán
 
-## 2. KẾT QUẢ ĐÃ THỰC HIỆN ĐƯỢC
-Tích hợp giỏ hàng cập nhật tiền qua AJAX, kiểm thử tính năng áp mã giảm giá (Coupon), chuẩn hóa biểu mẫu thông tin nhận hàng tại Việt Nam và quy trình tạo đơn hàng.
+## 2. KẾT QUẢ ĐẠT ĐƯỢC
+Hoàn thiện trải nghiệm mua hàng: Giỏ hàng cập nhật tiền tự động qua AJAX, tính năng áp dụng mã giảm giá (Coupon), biểu mẫu giao hàng tại Việt Nam và tích hợp 2 cổng thanh toán: COD (nhận hàng trả tiền mặt) và Chuyển khoản ngân hàng.
 
-## 3. ĐÁNH GIÁ TIẾN ĐỘ & CAM KẾT
-* **Mức độ hoàn thành:** 100% đúng kế hoạch đề ra.
-* **Các khó khăn gặp phải:** Đã được xử lý triệt để, hệ thống vận hành ổn định.
-* **Kế hoạch tuần tiếp theo:** Tiếp tục bám sát đề cương chi tiết của Giảng viên hướng dẫn.
+## 3. ĐÁNH GIÁ TIẾN ĐỘ
+* **Tiến độ:** Đạt 100% mục tiêu đề ra, bám sát yêu cầu của Giảng viên hướng dẫn.

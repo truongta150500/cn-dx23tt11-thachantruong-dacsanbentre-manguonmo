@@ -1,6 +1,0 @@
-@Profile_NhanPhu_HostAddress = http://localhost:5212
-
-GET {{Profile_NhanPhu_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

@@ -1,20 +1,18 @@
-# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUAN_03
+# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUẦN 03
 
-* **Sinh viên thực hiện:** Thạch An Trường
+* **Họ và tên sinh viên:** Thạch An Trường
 * **Mã số sinh viên:** 170123678
 * **Số điện thoại:** 0329886903 | **Email:** truongta150500@sv-onuni.edu.vn
-* **Đề tài:** Website TMĐT Đặc Sản Bến Tre trên LAMP Stack & WordPress (Giao diện Bách Hóa Xanh)
-* **Thời gian thực hiện:** Tuan 03
+* **Đề tài:** Website bán thực phẩm chế biến trên máy chủ mã nguồn mở LAMP và WordPress
+* **Thời gian thực hiện:** Tuần 03
 
 ---
 
-## 1. MỤC TIÊU CÔNG VIỆC TRONG TUẦN
-* Nhiệm vụ chính: **Triển khai WordPress 6.8 & WooCommerce**
+## 1. NỘI DUNG CÔNG VIỆC TRONG TUẦN
+* **Trọng tâm:** Nhiệm vụ 2: Tìm hiểu CMS WordPress & Cài đặt WooCommerce
 
-## 2. KẾT QUẢ ĐÃ THỰC HIỆN ĐƯỢC
-Tải và giải nén mã nguồn WordPress, cấu hình tệp wp-config.php. Cài đặt plugin thương mại điện tử WooCommerce 9.8.5, thiết lập tiền tệ VNĐ và cấu hình cổng thanh toán COD, Chuyển khoản.
+## 2. KẾT QUẢ ĐẠT ĐƯỢC
+Nghiên cứu kiến trúc CMS WordPress, phân tích ưu khuyết điểm, các tính năng quản trị nội dung. Cài đặt WordPress 6.8 tiếng Việt và plugin WooCommerce. Cấu hình chuẩn hóa tiền tệ Việt Nam (VNĐ).
 
-## 3. ĐÁNH GIÁ TIẾN ĐỘ & CAM KẾT
-* **Mức độ hoàn thành:** 100% đúng kế hoạch đề ra.
-* **Các khó khăn gặp phải:** Đã được xử lý triệt để, hệ thống vận hành ổn định.
-* **Kế hoạch tuần tiếp theo:** Tiếp tục bám sát đề cương chi tiết của Giảng viên hướng dẫn.
+## 3. ĐÁNH GIÁ TIẾN ĐỘ
+* **Tiến độ:** Đạt 100% mục tiêu đề ra, bám sát yêu cầu của Giảng viên hướng dẫn.

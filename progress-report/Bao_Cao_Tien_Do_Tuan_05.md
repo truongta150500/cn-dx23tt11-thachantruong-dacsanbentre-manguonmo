@@ -1,20 +1,18 @@
-# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUAN_05
+# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUẦN 05
 
-* **Sinh viên thực hiện:** Thạch An Trường
+* **Họ và tên sinh viên:** Thạch An Trường
 * **Mã số sinh viên:** 170123678
 * **Số điện thoại:** 0329886903 | **Email:** truongta150500@sv-onuni.edu.vn
-* **Đề tài:** Website TMĐT Đặc Sản Bến Tre trên LAMP Stack & WordPress (Giao diện Bách Hóa Xanh)
-* **Thời gian thực hiện:** Tuan 05
+* **Đề tài:** Website bán thực phẩm chế biến trên máy chủ mã nguồn mở LAMP và WordPress
+* **Thời gian thực hiện:** Tuần 05
 
 ---
 
-## 1. MỤC TIÊU CÔNG VIỆC TRONG TUẦN
-* Nhiệm vụ chính: **Chuẩn hóa dữ liệu 15 sản phẩm OCOP Bến Tre**
+## 1. NỘI DUNG CÔNG VIỆC TRONG TUẦN
+* **Trọng tâm:** Nhiệm vụ 3: Thu thập số liệu 10-15 sản phẩm thực phẩm chế biến địa phương
 
-## 2. KẾT QUẢ ĐÃ THỰC HIỆN ĐƯỢC
-Thu thập hình ảnh thực phẩm thực tế tỉ lệ vuông 1:1, phân loại 4 nhóm đặc sản, nhập chi tiết thông tin xuất xứ làng nghề (Mỹ Lồng, Sơn Đốc, Ba Tri, Chợ Lách) và tem OCOP.
+## 2. KẾT QUẢ ĐẠT ĐƯỢC
+Thu thập số liệu thực tế 15 sản phẩm thực phẩm chế biến (bánh kẹo, mứt sấy, thủy sản khô: Kẹo dừa sáp, Nem chua lá ổi, Bánh phồng tôm Sơn Đốc, Bánh tráng sữa, Tôm khô Ba Tri...). Chuẩn hóa hình ảnh tỉ lệ vuông 1:1, phân loại ngành hàng, giá niêm yết, xuất xứ làng nghề và tem chứng nhận OCOP.
 
-## 3. ĐÁNH GIÁ TIẾN ĐỘ & CAM KẾT
-* **Mức độ hoàn thành:** 100% đúng kế hoạch đề ra.
-* **Các khó khăn gặp phải:** Đã được xử lý triệt để, hệ thống vận hành ổn định.
-* **Kế hoạch tuần tiếp theo:** Tiếp tục bám sát đề cương chi tiết của Giảng viên hướng dẫn.
+## 3. ĐÁNH GIÁ TIẾN ĐỘ
+* **Tiến độ:** Đạt 100% mục tiêu đề ra, bám sát yêu cầu của Giảng viên hướng dẫn.

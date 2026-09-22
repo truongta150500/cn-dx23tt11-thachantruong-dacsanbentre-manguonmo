@@ -5,12 +5,18 @@
 bin/
 obj/
 
-# Node & Frontend
-Frontend/node_modules/
-Frontend/dist/
-
-# Archives & Temporary
-*.rar
+# Unrelated project folders
+Frontend/
+Profile_NhanPhu/
+Profile_NhanPhu.slnx
+DO_AN_THUCPHAM_BENTRE_NGUYEN_NHAN_PHU/
 DO_AN_THUCPHAM_BENTRE_NGUYEN_NHAN_PHU.zip
 DO_AN_THUCPHAM_BENTRE_THACH_AN_TRUONG.zip
+*.rar
+PROFILE-CO-THANH-TUU.*
+pdf_pages/
+pdf_content.json
+docker/
+backups/
+hinh_anh_giao_dien/
 *.log

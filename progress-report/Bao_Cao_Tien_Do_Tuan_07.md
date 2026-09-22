@@ -1,20 +1,18 @@
-# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUAN_07
+# BÁO CÁO TIẾN ĐỘ ĐỒ ÁN - TUẦN 07
 
-* **Sinh viên thực hiện:** Thạch An Trường
+* **Họ và tên sinh viên:** Thạch An Trường
 * **Mã số sinh viên:** 170123678
 * **Số điện thoại:** 0329886903 | **Email:** truongta150500@sv-onuni.edu.vn
-* **Đề tài:** Website TMĐT Đặc Sản Bến Tre trên LAMP Stack & WordPress (Giao diện Bách Hóa Xanh)
-* **Thời gian thực hiện:** Tuan 07
+* **Đề tài:** Website bán thực phẩm chế biến trên máy chủ mã nguồn mở LAMP và WordPress
+* **Thời gian thực hiện:** Tuần 07
 
 ---
 
-## 1. MỤC TIÊU CÔNG VIỆC TRONG TUẦN
-* Nhiệm vụ chính: **Tự động hóa Sao lưu & Phục hồi qua Xshell/Xftp**
+## 1. NỘI DUNG CÔNG VIỆC TRONG TUẦN
+* **Trọng tâm:** Nhiệm vụ 5: Thực hiện sao lưu và phục hồi qua công cụ Xshell, Xftp
 
-## 2. KẾT QUẢ ĐÃ THỰC HIỆN ĐƯỢC
-Lập trình kịch bản backup.sh (mysqldump + tar) và restore.sh. Kiểm thử kết nối dòng lệnh qua Xshell 7 cổng 2222, truyền tệp an toàn bằng Xftp 7, đo đạc thời gian khôi phục < 15 giây.
+## 2. KẾT QUẢ ĐẠT ĐƯỢC
+Lập trình 2 kịch bản tự động `backup.sh` (mysqldump + tar) và `restore.sh`. Thực nghiệm kết nối dòng lệnh từ xa bằng Xshell 7 qua cổng SSH 2222. Truyền tệp lưu trữ ngoại vi an toàn bằng Xftp 7 qua cổng SFTP 2222. Kiểm thử khôi phục thảm họa thành công dưới 15 giây.
 
-## 3. ĐÁNH GIÁ TIẾN ĐỘ & CAM KẾT
-* **Mức độ hoàn thành:** 100% đúng kế hoạch đề ra.
-* **Các khó khăn gặp phải:** Đã được xử lý triệt để, hệ thống vận hành ổn định.
-* **Kế hoạch tuần tiếp theo:** Tiếp tục bám sát đề cương chi tiết của Giảng viên hướng dẫn.
+## 3. ĐÁNH GIÁ TIẾN ĐỘ
+* **Tiến độ:** Đạt 100% mục tiêu đề ra, bám sát yêu cầu của Giảng viên hướng dẫn.
